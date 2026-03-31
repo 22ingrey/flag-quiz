@@ -1,0 +1,20 @@
+{% extends 'quiz/base.html' %}
+
+{% block title %}Flag Quiz - Results{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h1>Quiz Complete!</h1>
+
+    <div class="score-display">
+        {{ score }} / {{ total }}
+    </div>
+
+    <p class="result-message">You scored {{ percentage }}% - {{ message }}</p>
+
+    <div class="result-buttons">
+        <a href="{% url 'start_quiz' %}" class="btn">Play Again</a>
+        <a href="{% url 'home' %}" class="btn btn-secondary">Main Menu</a>
+    </div>
+</div>
+{% endblock %}

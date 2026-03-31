@@ -1,0 +1,20 @@
+{% extends 'quiz/base.html' %}
+
+{% block title %}Flag Quiz - Home{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h1>🌍 Flag Quiz</h1>
+    <p>Test your knowledge of world flags! A flag will be shown and you must pick the correct country from four options.</p>
+
+    <h2>How to Play</h2>
+    <ul>
+        <li>A country flag will appear on screen</li>
+        <li>Select the correct country from the four buttons</li>
+        <li>You will get instant feedback on your answer</li>
+        <li>Your score is shown at the end</li>
+    </ul>
+
+    <a href="{% url 'start_quiz' %}" class="btn">Start Quiz</a>
+</div>
+{% endblock %}

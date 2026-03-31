@@ -1,0 +1,41 @@
+{% extends 'quiz/base.html' %}
+
+{% block title %}Flag Quiz - Question {{ question_number }}{% endblock %}
+
+{% block content %}
+
+<!-- Progress info -->
+<div class="quiz-info">
+    <span>Question {{ question_number }} of {{ total }}</span>
+    <span>Score: {{ score }}</span>
+</div>
+
+<!-- Progress bar -->
+<div class="progress-bar">
+    <div class="progress-bar-fill" style="width: {% widthratio question_number total 100 %}%"></div>
+</div>
+
+<!-- Flag display -->
+<div class="flag-display">
+    {{ flag }}
+</div>
+
+<div class="card">
+    <h2>Which country does this flag belong to?</h2>
+
+    <!-- Answer form - submits to the answer view -->
+    <form method="POST" action="{% url 'answer' %}" id="answer-form">
+        {% csrf_token %}
+        <input type="hidden" name="correct_answer" value="{{ correct_answer }}">
+
+        <div class="choices">
+            {% for choice in choices %}
+            <button type="submit" name="selected_answer" value="{{ choice }}" class="choice-btn">
+                {{ choice }}
+            </button>
+            {% endfor %}
+        </div>
+    </form>
+</div>
+
+{% endblock %}

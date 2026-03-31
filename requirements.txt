@@ -1,0 +1,7 @@
+# requirements.txt
+# -----------------
+# Python package dependencies for the Flag Geography Quiz project.
+# Install all dependencies by running:
+#   pip install -r requirements.txt
+
+Django>=5.0.1

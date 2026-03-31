@@ -1,0 +1,197 @@
+/* style.css - Flag Quiz Stylesheet
+   Simple styling for the Flag Geography Quiz web application */
+
+/* Basic page setup */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar at the top */
+header {
+    background-color: #3366cc;
+    color: white;
+    padding: 15px 20px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Main content area */
+main {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #666;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/* Card / white box used on all pages */
+.card {
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+/* Page headings */
+h1 {
+    color: #3366cc;
+    font-size: 28px;
+}
+
+h2 {
+    color: #333333;
+    font-size: 18px;
+}
+
+/* Paragraph text */
+p {
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Unordered list on home page */
+ul {
+    font-size: 16px;
+    line-height: 2;
+    color: #333333;
+}
+
+/* Primary button style */
+.btn {
+    display: inline-block;
+    background-color: #3366cc;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #2255bb;
+}
+
+/* Secondary button (grey) */
+.btn-secondary {
+    background-color: #888888;
+}
+
+.btn-secondary:hover {
+    background-color: #666666;
+}
+
+/* Flag emoji display */
+.flag-display {
+    font-size: 150px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Progress info text */
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #555555;
+    margin-bottom: 10px;
+}
+
+/* Progress bar */
+.progress-bar {
+    background-color: #dddddd;
+    border-radius: 4px;
+    height: 10px;
+    margin-bottom: 20px;
+}
+
+.progress-bar-fill {
+    background-color: #3366cc;
+    height: 10px;
+    border-radius: 4px;
+}
+
+/* Answer choice buttons grid */
+.choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Individual answer button */
+.choice-btn {
+    background-color: white;
+    border: 2px solid #cccccc;
+    border-radius: 6px;
+    padding: 14px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.choice-btn:hover {
+    background-color: #e8f0fe;
+    border-color: #3366cc;
+}
+
+/* Correct answer highlight */
+.choice-btn.correct {
+    background-color: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+/* Wrong answer highlight */
+.choice-btn.wrong {
+    background-color: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+/* Results score display */
+.score-display {
+    font-size: 48px;
+    font-weight: bold;
+    color: #3366cc;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.result-message {
+    font-size: 18px;
+    text-align: center;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+/* Buttons on results page */
+.result-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
