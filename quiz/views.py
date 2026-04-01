@@ -72,11 +72,13 @@ def quiz(request):
     # Generate the multiple choice question using the subprogram
     question = generate_question(current_question, all_countries)
 
+    # Store the correct answer in the session so it never appears in the HTML
+    request.session['correct_answer'] = question['correct_answer']
+
     context = {
         'flag': question['flag'],
         'choices': question['choices'],
-        'correct_answer': question['correct_answer'],
-        'question_number': current_index + 1,
+        'question_number': current_index,
         'total': total,
         'score': score,
     }
@@ -88,7 +90,9 @@ def answer(request):
     # Handles the submitted answer from the quiz form
     if request.method == 'POST':
         selected = request.POST.get('selected_answer', '')
-        correct = request.POST.get('correct_answer', '')
+
+        # Get the correct answer from the session, not from the form
+        correct = request.session.get('correct_answer', '')
 
         # Check if the answer is correct and update the score
         if selected == correct:
