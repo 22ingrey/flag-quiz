@@ -168,7 +168,7 @@ ul {
 /* Wrong answer highlight */
 .choice-btn.wrong {
     background-color: #f8d7da;
-    border-color: #dc3545;
+    border-color: #cd2d3d;
     color: #721c24;
 }
 

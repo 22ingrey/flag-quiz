@@ -78,7 +78,7 @@ def quiz(request):
     context = {
         'flag': question['flag'],
         'choices': question['choices'],
-        'question_number': current_index,
+        'question_number': current_index + 1,
         'total': total,
         'score': score,
     }
